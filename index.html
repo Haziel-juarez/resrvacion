@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación</title>
+    <link rel="stylesheet" href="css/diseño.css">
+</head>
+<body>
+    <div id="paso1">
+        <h2>Reservación</h2>
+        <input type="text" id="nombre" placeholder="Nombre Completo" required>
+        <input type="email" id="correo" placeholder="Correo Electrónico" required>
+        <select id="pais">
+            <option value="">País</option>
+            <option value="Francia">Francia</option>
+            <option value="España">España</option>
+            <option value="Japón">Japón</option>
+            <option value="Corea del Sur">Corea del Sur</option>
+            <option value="Suiza">Suiza</option>
+        </select>
+        <input type="tel" id="telefono" placeholder="Teléfono" required>
+        <input type="datetime-local" id="fecha_inicio" required>
+        <input type="datetime-local" id="fecha_fin" required>
+        <input type="number" id="personas" placeholder="Cantidad de Personas" required>
+        <button onclick="mostrarPaso(2)">Continuar</button>
+    </div>
+    
+    <div id="paso2">
+        <h2>Itinerario</h2>
+        <label>Día 1</label>
+        <select id="dia1">
+            <option value="City tour">City tour</option>
+            <option value="Día libre">Día libre</option>
+        </select>
+        <label>Día 2</label>
+        <select id="dia2">
+            <option value="Lugar turístico">Lugar turístico</option>
+            <option value="Lugar turístico + otro">Lugar turístico + otro</option>
+            <option value="Día libre">Día libre</option>
+        </select>
+        <label>Día 3</label>
+        <select id="dia3">
+            <option value="Atracción principal">Atracción principal</option>
+        </select>
+        <button onclick="mostrarPaso(1)">Atrás</button>
+        <button onclick="mostrarPaso(3)">Continuar</button>
+    </div>
+    
+    <div id="paso3">
+        <h2>Hospedaje</h2>
+        <label>Tipo de alojamiento</label>
+        <select id="hospedaje">
+            <option value="Alojamiento turístico">Alojamiento turístico</option>
+            <option value="Hotel 3 estrellas">Hotel 3 estrellas</option>
+            <option value="Hotel 4 estrellas">Hotel 4 estrellas</option>
+            <option value="Hotel 5 estrellas">Hotel 5 estrellas</option>
+            <option value="Airbnb">Otro (Airbnb)</option>
+        </select>
+        <button onclick="mostrarPaso(2)">Atrás</button>
+        <button id="guardarBtn">Guardar</button>
+    </div>
+    <script src="js/validar.js"></script>
+</body>
+</html>
